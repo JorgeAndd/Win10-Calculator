@@ -101,6 +101,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VO\CalculadoraVO.cs" />
+    <Compile Include="VO\Calculator.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
