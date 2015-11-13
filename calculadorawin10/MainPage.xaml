@@ -8,15 +8,54 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
         <Grid.RowDefinitions>
-            <RowDefinition Height="13*"/>
-            <RowDefinition Height="147*"/>
+            <RowDefinition Height="1.5*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="10,44,0,0" TextWrapping="Wrap" Text="Número 1" VerticalAlignment="Top" Grid.Row="1"/>
-        <TextBox x:Name="txtNumero1" Margin="103,44,150,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" d:LayoutOverrides="LeftPosition, RightPosition" Grid.Row="1"/>
-        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="10,88,0,0" TextWrapping="Wrap" Text="Número 2" VerticalAlignment="Top" Grid.Row="1"/>
-        <TextBox x:Name="txtNumero2" Margin="103,88,150,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" d:LayoutOverrides="LeftPosition, RightPosition" Grid.Row="1"/>
-        <Button x:Name="btnCalcular" Content="Calcular" HorizontalAlignment="Left" Margin="68,158,0,0" Grid.Row="1" VerticalAlignment="Top" Width="109" Click="btnCalcular_Click"/>
-        <TextBlock x:Name="txtResultado" HorizontalAlignment="Left" Margin="68,230,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="109"/>
+
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="4" x:Name="txtResult" TextWrapping="Wrap" Text="0" FontSize="46.667" TextAlignment="Right" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+        <Button Grid.Row="1" Grid.Column="0" Name="btnPercentage" Content="%" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Foreground="Gray" Background="#FFF2F2F2" FontSize="16"/>
+        <Button Grid.Row="1" Grid.Column="1" x:Name="btnRoot" Content="√" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Foreground="Gray" Background="#FFF2F2F2" FontSize="16"/>
+        <Button Grid.Row="1" Grid.Column="2" x:Name="btnPower" Content="x²" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Foreground="Gray" Background="#FFF2F2F2" FontSize="16"/>
+        <Button Grid.Row="1" Grid.Column="3" x:Name="btnOver" Content="1/x" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Foreground="Gray" Background="#FFF2F2F2" FontSize="16"/>
+
+        <Button Grid.Row="2" Grid.Column="0" x:Name="btnClearEntry" Content="CE" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="16"/>
+        <Button Grid.Row="2" Grid.Column="1" x:Name="btnClear" Content="C"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="16"/>
+        <Button Grid.Row="2" Grid.Column="2" x:Name="btnBackspace" Content="back"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="16"/>
+        <Button Grid.Row="2" Grid.Column="3" x:Name="btnOpDiv" Content="/"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="16"/>
+
+        <Button Grid.Row="3" Grid.Column="0" x:Name="btnNumber7" Content="7"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="16"/>
+        <Button Grid.Row="3" Grid.Column="1" x:Name="btnNumber8" Content="8"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="16"/>
+        <Button Grid.Row="3" Grid.Column="2" x:Name="btnNumber9" Content="9"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="16"/>
+        <Button Grid.Row="3" Grid.Column="3" x:Name="btnOpTimes" Content="X"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="16"/>
+
+        <Button Grid.Row="4" Grid.Column="0" x:Name="btnNumber4" Content="4"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="16"/>
+        <Button Grid.Row="4" Grid.Column="1" x:Name="btnNumber5" Content="5"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="16"/>
+        <Button Grid.Row="4" Grid.Column="2" x:Name="btnNumber6" Content="6"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="16"/>
+        <Button Grid.Row="4" Grid.Column="3" x:Name="btnOpSub" Content="-"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="16"/>
+
+        <Button Grid.Row="5" Grid.Column="0" x:Name="btnNumber1" Content="1"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="16"/>
+        <Button Grid.Row="5" Grid.Column="1" x:Name="btnNumber2" Content="2"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="16"/>
+        <Button Grid.Row="5" Grid.Column="2" x:Name="btnNumber3" Content="3"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="16"/>
+        <Button Grid.Row="5" Grid.Column="3" x:Name="btnOpPlus" Content="+"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="16"/>
+
+        <Button Grid.Row="6" Grid.Column="0" x:Name="btnOpSignal" Content="+-"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="16"/>
+        <Button Grid.Row="6" Grid.Column="1" x:Name="btnNumber0" Content="0"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="16"/>
+        <Button Grid.Row="6" Grid.Column="2" x:Name="btnComma" Content=","  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="16"/>
+        <Button Grid.Row="6" Grid.Column="3" x:Name="btnOpEqual" Content="="  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="16"/>
+
     </Grid>
+
 </Page>
